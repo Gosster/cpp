@@ -8,8 +8,10 @@ int main()
 char koniec;
 
 do{
-    const int rozmiar = 7;
-    float tablica[rozmiar];
+    int rozmiar;
+    float tablica[1000];
+    cout << "Ile liczb wczytac (maksymalnie 1000)?: ";
+cin >> rozmiar;
     float wynik = 0;
     for (int i=0; i<rozmiar; i++){
         cout << "Podaj liczbe " << i+1 << " = ";
