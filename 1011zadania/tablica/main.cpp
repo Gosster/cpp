@@ -29,12 +29,23 @@ int main()
         slowo[b] += wyraz[j];
         b++;
     }
+    cout << endl;
+
+    for (int o=0; o<dlugoscWyrazu; o++){
+        cout << o << " " << wyraz[o] << " pierwsze\n";
+        cout << o << " " << slowo[o] << " drugie\n";
+    }
+
+    cout << "\n---\n";
 
 int c=0;
 int sprawdzenie = 0;
-    for (int k=0; k<dlugoscWyrazu-1; k++){
-        if (wyraz[c]!= slowo[k]){
-            sprawdzenie = 1;
+    for (int k=dlugoscWyrazu-1; k>0; k--){
+        if (wyraz[c]== slowo[c]){
+                cout << "dobrze";
+        }else
+        {
+            sprawdzenie=1;
             break;
         }
         c++;
