@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1668457437 source:c:\users\48603\documents\cpp\podciag\main.cpp
+	<iostream>
+	<time.h>
+
