@@ -27,21 +27,33 @@ int main()
     if (dlugoscSlowa<rozmiar && slowo>0){
     cout << "Wyraz ma: " <<dlugoscSlowa << " liter.\n";
 
-    string zgadywanie;
+    char zgadywanie[dlugoscSlowa];
+    int czyDobrze = 1;
 
-    for (int i=-1; i<dlugoscSlowa-1; i++){
+    for (int i=0; i<dlugoscSlowa; i++){
     podpowiedz[i] = slowo[i];
-    cout <<  "Wskazowka: " << podpowiedz << endl;
-    cout << "Zgadnij: ";
+    cout <<  "Wskazowka: ";
+    for (int j = 0; j<i; j++){
+        cout << podpowiedz[j];
+    }
+
+    cout << "\nZgadnij: ";
     cin >> zgadywanie;
-    if(zgadywanie==slowo){
+    for (int j=0; j<dlugoscSlowa; j++){
+        if (zgadywanie[j] != slowo[j]){
+            czyDobrze = 0;
+            break;
+        }
+    }
+    if(czyDobrze==1){
         cout << "Brawo! Zgadles/as!";
         break;
     }
-    else if(i==dlugoscSlowa-2){
+    else if(i==dlugoscSlowa-1){
         cout << "Nie udalo Ci sie zgadnac! Slowo to: " << slowo << endl;
         break;
     }
+    czyDobrze = 1;
     }
 }else{
 cout << "Podales zly wyraz!";
