@@ -20,6 +20,17 @@ int main()
         cout << endl;
     }
 
+    int najwieksza = 0;
+
+    for (int i=0; i<rzedy; i++){
+        for (int j=0; j<kolumny; j++){
+            if (tablicaDwuwymiarowa[i][j]>+najwieksza){
+                najwieksza = tablicaDwuwymiarowa[i][j];
+            }
+        }
+    }
+
+    cout << "Najwieksza liczba z tablicy: " << najwieksza << endl;
     cout << "Podaj elementy do wyszukania: ";
     cin >> szukana;
 
