@@ -19,18 +19,27 @@ int main()
         }
         cout << endl;
     }
-
     int najwieksza = 0;
+    int najmniejsza;
 
     for (int i=0; i<rzedy; i++){
         for (int j=0; j<kolumny; j++){
-            if (tablicaDwuwymiarowa[i][j]>+najwieksza){
+            if (tablicaDwuwymiarowa[i][j]>=najwieksza){
                 najwieksza = tablicaDwuwymiarowa[i][j];
             }
         }
     }
 
+    for (int i=0; i<rzedy; i++){
+        for (int j=0; j<kolumny; j++){
+            if (tablicaDwuwymiarowa[i][j]<=najmniejsza){
+                najmniejsza = tablicaDwuwymiarowa[i][j];
+            }
+        }
+    }
+
     cout << "Najwieksza liczba z tablicy: " << najwieksza << endl;
+    cout << "Najmniejsza liczba z tablicy: " << najmniejsza << endl;
     cout << "Podaj elementy do wyszukania: ";
     cin >> szukana;
 
