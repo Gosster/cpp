@@ -20,5 +20,7 @@ int main()
     }
 
     wynik = macierz[0][0]*macierz[1][1]*macierz[2][2]-macierz[0][0]*macierz[1][2]*macierz[2][1]-macierz[1][0]*macierz[0][1]*macierz[2][2]+macierz[1][0]*macierz[0][2]*macierz[2][1]+macierz[2][0]*macierz[0][1]*macierz[1][2]-macierz[2][0]*macierz[0][2]*macierz[1][1];
-    cout << wynik;
+    cout << "Wyznacznik macierzy wynosi: " << wynik << endl;
+    int sladMacierzy = macierz[0][0]+macierz[1][1]+macierz[2][2];
+    cout << "Slad macierzy wynosi: " << sladMacierzy;
 }
