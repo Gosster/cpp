@@ -6,12 +6,11 @@
 
 using namespace std;
 
-
-
 double Monte_Pi(long int n){
     time_t t;
     srand((unsigned) time(&t));
-    double x,y,wynik, pKola;
+    double x,y,wynik;
+    int pKola;
     for (int i = 0; i<n; i++){
     x=double(rand())/RAND_MAX;
     y=double(rand())/RAND_MAX;
@@ -20,14 +19,14 @@ double Monte_Pi(long int n){
         pKola++;
     }
     }
-    double pi = 4*(pKola/n);
-    cout << "Pi wynosi: " << pi;
-
+    double pi = 4*pKola/n;
+    cout << "Pi wynosi: " << pi << endl;
+    cout << "Dla porownania liczba pi wedlug math.h wynosi: " << M_PI;
 }
 
 int main()
 {
-    int n;
+    long int n;
     cout << "Podaj liczbe losowan: ";
     cin >> n;
     Monte_Pi(n);
