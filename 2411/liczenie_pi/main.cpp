@@ -21,14 +21,27 @@ double Monte_Pi(long int n){
     }
     double pi = 4*pKola/n;
     cout << "Pi wynosi: " << pi << endl;
-    cout << "Dla porownania liczba pi wedlug math.h wynosi: " << M_PI;
+    cout << "Dla porownania, liczba pi wedlug math.h wynosi: " << M_PI << endl;
+}
+
+double Liczba_Eulera(long int m){
+    time_t t;
+    srand((unsigned) time(&t));
+    double x,y,wynik;
+    for (int i = 0; i<m; i++){
+    x=double(rand())/RAND_MAX;
+    y=double(rand())/RAND_MAX;
+}
 }
 
 int main()
 {
-    long int n;
-    cout << "Podaj liczbe losowan: ";
+    long int n, m;
+    cout << "Podaj liczbe losowan PI: ";
     cin >> n;
     Monte_Pi(n);
+    cout << "Podaj liczbe losowan Eulera: ";
+    cin >> m;
+    Liczba_Eulera(m);
     return 0;
 }
