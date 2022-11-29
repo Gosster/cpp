@@ -6,22 +6,23 @@
 
 using namespace std;
 
-double Monte_Pi(long int n){
+double montePi(long int n){
     time_t t;
     srand((unsigned) time(&t));
-    double x,y,wynik;
-    int pKola;
+    double x,y, pi;
+    double pKola = 0, wynik;
+
     for (int i = 0; i<n; i++){
     x=double(rand())/RAND_MAX;
     y=double(rand())/RAND_MAX;
-    wynik = (x*x) + (y*y);
+    wynik = x*x + y*y;
     if (wynik<1){
         pKola++;
     }
     }
-    double pi = 4*pKola/n;
-    cout << "Pi wynosi: " << pi << endl;
-    cout << "Dla porownania, liczba pi wedlug math.h wynosi: " << M_PI << endl;
+
+    pi = 4*pKola/n;
+    return pi;
 }
 
 double Liczba_Eulera(long int m){
@@ -39,9 +40,10 @@ int main()
     long int n, m;
     cout << "Podaj liczbe losowan PI: ";
     cin >> n;
-    Monte_Pi(n);
-    cout << "Podaj liczbe losowan Eulera: ";
-    cin >> m;
+    cout << "Pi wynosi: " << montePi(n) << endl;
+    cout << "Dla porownania, liczba pi wedlug math.h wynosi: " << M_PI << endl;
+    //cout << "Podaj liczbe losowan Eulera: ";
+    //cin >> m;
     Liczba_Eulera(m);
     return 0;
 }
