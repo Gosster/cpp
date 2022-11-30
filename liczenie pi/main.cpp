@@ -13,12 +13,12 @@ double montePi(long int n){
     double pKola = 0, wynik;
 
     for (int i = 0; i<n; i++){
-    x=double(rand())/RAND_MAX;
-    y=double(rand())/RAND_MAX;
-    wynik = x*x + y*y;
-    if (wynik<1){
-        pKola++;
-    }
+        x=double(rand())/RAND_MAX;
+        y=double(rand())/RAND_MAX;
+        wynik = x*x + y*y;
+        if (wynik<1){
+            pKola++;
+        }
     }
 
     pi = 4*pKola/n;
@@ -42,10 +42,8 @@ int main()
     cin >> n;
     cout << "Pi wynosi: " << montePi(n) << endl;
     cout << "Dla porownania, liczba pi wedlug math.h wynosi: " << M_PI << endl;
-    //cout << "Podaj liczbe losowan Eulera: ";
-    //cin >> m;
-    Liczba_Eulera(m);
+    // cout << "Podaj liczbe losowan Eulera: ";
+    // cin >> m;
+    // Liczba_Eulera(m);
     return 0;
 }
-
-
