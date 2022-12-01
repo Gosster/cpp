@@ -2,6 +2,29 @@
 
 using namespace std;
 
+void prostPelny(int dlugosc,int wysokosc, char znak){
+    for (int i=0; i<dlugosc; i++){
+        for (int j=0; j<wysokosc; j++){
+            cout << znak;
+        }
+        cout << endl;
+    }
+}
+
+void prostPusty(int dlugosc,int wysokosc, char znak){
+    for (int i=0; i<dlugosc; i++){
+        for (int j=0; j<wysokosc; j++){
+            if (j==0 || i==0 || i==dlugosc-1 || j==wysokosc-1){
+            cout << znak;
+            }
+        else{
+            cout << " ";
+        }
+        }
+        cout << endl;
+    }
+}
+
 int main()
 {
     char koniec, znak;
@@ -9,15 +32,12 @@ int main()
     do {
 
     cout << "Podaj znak: ";
-
     cin  >> znak;
 
-    int dlugosc;
+    int dlugosc, wysokosc;
 
     cout << "Podaj dlugosc:";
     cin >> dlugosc;
-
-    int wysokosc;
 
     cout << "Podaj wysokosc:";
     cin >> wysokosc;
@@ -30,28 +50,13 @@ int main()
 
     case 1:
 
-    for (int i=0; i<dlugosc; i++){
-        for (int j=0; j<wysokosc; j++){
-            cout << znak;
-        }
-        cout << endl;
-    }
+    prostPelny(wysokosc, dlugosc, znak);
 
     break;
 
     case 2:
 
-    for (int i=0; i<dlugosc; i++){
-        for (int j=0; j<wysokosc; j++){
-            if (j==0 || i==0 || i==dlugosc-1 || j==wysokosc-1){
-            cout << znak;
-            }
-        else{
-            cout << " ";
-        }
-        }
-        cout << endl;
-    }
+    prostPusty(wysokosc,dlugosc, znak);
 
     break;
 
